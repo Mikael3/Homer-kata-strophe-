@@ -1,5 +1,10 @@
-$("#accueil").click(function () {
-    $('#son')[0].play();
+
+var bienvenue = new Audio('son/woohoo.mp3');
+
+
+
+$("#test").click(function () {
+    welcome.play();
 
 });
 
@@ -11,16 +16,16 @@ $("#start").click(function () {
 
 
 
-    $('#donut').animate({ bottom: '25px' }, 2000, 'linear', function () {
+    $('#donut').animate({ bottom: '100px' }, 2000, 'linear', function () {
 
 
-        var donutX = Math.floor(Math.random() * 50);
+        var donutX = Math.floor(Math.random() * 200)+250;
 
-        var donutY = 800;
+        var donutY = 1000;
 
         $('#donut').css('bottom', donutY);
 
-        $('#donut').css('right', donutX);
+        $('#donut').css('left', donutX);
 
         manger = 1;
 

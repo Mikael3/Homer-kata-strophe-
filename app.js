@@ -1,25 +1,23 @@
-
-var bienvenue = new Audio('son/woohoo.mp3');
-
-
-
-$("#test").click(function () {
-    welcome.play();
-
-});
-
-
 $("#start").click(function () {
     $('#sound')[0].play();
 
     var manger = 1;
 
+    function start()
 
+    console.log('start')
+
+    {
+
+//la methode animate déplace. Cette methode permet de déplacer l'objet. Ici c'est un donut que l'on déplace vers le bas.
 
     $('#donut').animate({ bottom: '100px' }, 2000, 'linear', function () {
 
+console.log('donut')
 
-        var donutX = Math.floor(Math.random() * 200)+250;
+//le donut se déplace aléatoirement de gauche à droite
+
+        var donutX = Math.floor(Math.random() * 400);
 
         var donutY = 1000;
 
@@ -29,15 +27,26 @@ $("#start").click(function () {
 
         manger = 1;
 
-
+        
     });
+    start();
 
-
+    console.log('start')
+    };
+    
 });
+
+
 
 $(document).keydown(function(e){
 
 
+//pour connaitre à quoi corresponde les touches il faut aller sur
+    //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_key_which2
+
+
+
+    //ici c'est pour la flèche de droite
 
     if (e.which == 39)
 
@@ -53,6 +62,8 @@ $(document).keydown(function(e){
 
     if (e.which == 37)
 
+    //ici c'est pour laflèche de gauche
+
     {
 
       homerX = parseInt($('#homer').css('left'));
@@ -64,6 +75,8 @@ $(document).keydown(function(e){
     }
 
 });
+
+
 
 
 
